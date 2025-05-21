@@ -17,16 +17,21 @@ const Home = () => {
       <div className="flex justify-center">
         <GameBoard />
       </div>
-      <div className="flex text-white flex-col border border-white">
-        <div className="flex">
-          <p className="w-[200px] border-r-2 border-white">Guess Word</p>
-          <p className="w-[200px]">Status</p>
+      <div className="text-white border border-white w-fit mx-auto h-fit mt-6 rounded-md overflow-hidden">
+        <div className="flex bg-white bg-opacity-10 font-semibold">
+          <p className="w-[200px] border-r border-white text-black px-4 py-2 text-center">
+            Guess Word
+          </p>
+          <p className="w-[200px] px-4 py-2 text-black text-center">Status</p>
         </div>
+
         {game.length > 0 &&
-          game.map((game, index) => (
-            <div key={index} className="flex border-2 border-white">
-              <p className="w-[200px] border-r-2 border-white">{game.phrase}</p>
-              <p className="w-[200px]">{game.status}</p>
+          game.map((item, index) => (
+            <div key={index} className="flex border-t border-white">
+              <p className="w-[200px] border-r border-white px-4 py-2 text-center">
+                {item.phrase}
+              </p>
+              <p className="w-[200px] px-4 py-2 text-center">{item.status}</p>
             </div>
           ))}
       </div>

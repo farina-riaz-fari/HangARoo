@@ -36,7 +36,7 @@ const PhraseDisplay: React.FC<Props> = ({ phrase, guessedLetters, hint }) => {
           );
         })}
       </div>
-      <div className="absolute py-1 px-12 bg-blue-600 w-max border-2 border-yellow-400 text-white font-bold text-2xl top-[342px] left-1/2 ml-30 right-1/2 transform -translate-x-1/2 rounded-lg">
+      <div className="absolute py-1 px-12 bg-blue-600 w-max border-2 border-yellow-400 text-white font-bold text-2xl top-[342px] left-[37%] right-1/2 transform -translate-x-1/2 rounded-lg">
         {hint}
       </div>
     </>
